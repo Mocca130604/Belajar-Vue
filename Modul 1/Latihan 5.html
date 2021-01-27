@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latihan 5</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+
+    <div id="app">
+        <p v-if="itemInStock > 10">{{itemInStock}} Stock tersisa</p>
+        <p v-id="itemInStock > 0">Cepet stock nya tinggal sedikit {{itemInStock}} items left</p>
+        <p v-else>Yah, Habis</p>
+    </div>
+
+    <script>
+        var app = new Vue({
+            el: "#app",
+            data: {
+                itemInStock: 10
+            }
+        })
+    </script>
+</body>
+</html>
